@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <h1>My first API on Django</h1>
+
+    <script>
+        $.get( "/news/", function( data ) {
+            console.log(data)
+        });
+        $.post( "/news/", JSON.stringify({
+            title: "Yuri!",
+            text: "Hello Yuri!"
+        }));
+    </script>
+
+{% endblock content %}
